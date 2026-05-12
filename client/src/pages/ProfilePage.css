@@ -47,9 +47,6 @@
 .profile-upload img {
   width: 3rem;
   height: 3rem;
-}
-
-.profile-upload img.selected {
   border-radius: 50%;
 }
 

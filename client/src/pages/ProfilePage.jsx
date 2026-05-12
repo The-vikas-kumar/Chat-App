@@ -41,7 +41,7 @@ const ProfilePage = () => {
           <h3 className='profile-title'>Profile details</h3>
           <label htmlFor="avatar" className='profile-upload'>
             <input onChange={(e)=>setSelectedImg(e.target.files[0])} type="file" id='avatar' accept='.png, .jpg, .jpeg' hidden />
-            <img src={selectedImg ? URL.createObjectURL(selectedImg) : assets.avatar_icon} alt="" className={`profile-upload ${selectedImg ? 'selected' : ''}`}/>
+            <img src={selectedImg ? URL.createObjectURL(selectedImg) : (authUser?.profilePic || assets.avatar_icon)} alt="" />
             upload profile image
           </label>
           <input onChange={(e)=>setName(e.target.value)} value={name} type="text" required placeholder='Your Name' 
